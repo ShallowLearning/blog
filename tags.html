@@ -1,57 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Joshua Loyal's Blog - Tags</title>
-        <link rel="stylesheet" href="https://github.com/joshloyal/theme/css/main.css" />
-        <link href="https://github.com/joshloyal/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joshua Loyal's Blog Atom Feed" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joshua Loyal, data science and more">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <link rel="alternate"  href="https://github.com/joshloyal/feeds/all.atom.xml" type="application/atom+xml" title="Joshua Loyal Full Atom Feed"/>
+
+        <title>Joshua Loyal - Tags</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://github.com/joshloyal/theme/css/pure.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="https://github.com/joshloyal/">Joshua Loyal's Blog </a></h1>
-                <nav><ul>
-                </ul></nav>
-        </header><!-- /#banner -->
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('/images/banner.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/profile_image.jpg">
+                            <h1 class="brand-main"><a href="https://github.com/joshloyal">Joshua Loyal</a></h1>
+                            <p class="tagline">data science and more</p>
 
-<section id="content" class="body">
-    <h1>Tags for Joshua Loyal's Blog</h1>
-    <ul>
-    </ul>
-</section>
+                            <div class="pages-menu">
+                                <p>
+                                    <span class="links"> <a href="https://github.com/joshloyal">Home</a></span>
+                                        <span class="seperator">&#x2022; </span> <span class="links"> <a href="https://joshloyal.github.io">About</a> </span>
+                                        <span class="seperator">&#x2022; </span> <span class="links"> <a href="https://joshloyal.github.io/docs/resume.pdf">Resume</a> </span>
+                                        <p class="social">
+                                            <a href="https://github.com/joshloyal">
+                                                <i class="fa fa-github fa-3x"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/joshloyal">
+                                                <i class="fa fa-linkedin fa-3x"></i>
+                                            </a>
+                                </p>
+                            </div>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <h1>Tags for Joshua Loyal</h1>        <li><a href="https://github.com/joshloyal/tag/thoughts/">thoughts</a> (1)</li>
+    </div>
+    <script>
+        var $top = $('.go-top');
 
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="https://github.com/joshloyal/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
 
 </body>
 </html>
