@@ -10,15 +10,20 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://joshloyal.github.io'
-RELATIVE_URLS = False
+#SITEURL = u'https://joshloyal.github.io/blog'
+RELATIVE_URLS = True
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
+# reset image url
+PROFILE_IMG_URL = "/blog/images/profile_image.jpg"
+COVER_IMG_URL = "/blog/images/coverimage.jpg"
+
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "joshualoyalblog"
 #GOOGLE_ANALYTICS = ""

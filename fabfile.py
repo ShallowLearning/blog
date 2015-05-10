@@ -7,7 +7,9 @@ import SocketServer
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
+env.theme_path = 'themes'
 DEPLOY_PATH = env.deploy_path
+THEME_PATH = env.theme_path
 
 # Remote server configuration
 production = 'root@localhost:22'
@@ -24,8 +26,14 @@ def clean():
         local('rm -rf {deploy_path}'.format(**env))
         local('mkdir {deploy_path}'.format(**env))
 
+def collectstatic():
+    if os.path.isdir(DEPLOY_PATH):
+        local('mkdir -p {deploy_path}/images/'.format(**env))
+        #local('cp -rf {theme_path}/images/* {deploy_path}/images/'.format(**env))
+
 def build():
     local('pelican -s pelicanconf.py')
+    #collectstatic()
 
 def rebuild():
     clean()
