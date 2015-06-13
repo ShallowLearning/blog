@@ -4,6 +4,7 @@ import os
 import sys
 import SimpleHTTPServer
 import SocketServer
+from datetime import datetime
 
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
@@ -20,6 +21,48 @@ env.cloudfiles_username = 'my_rackspace_username'
 env.cloudfiles_api_key = 'my_rackspace_api_key'
 env.cloudfiles_container = 'my_cloudfiles_container'
 
+author_info = { 'josh': {'name': 'Joshua Loyal',
+                         'email': 'jloyal25@gmail.com',
+                         'about': 'Data scientist at Datarobot, '
+                                  'physicist, wannabe guitar player, '
+                                  'and an avid climber.'}
+}
+
+def make_entry(title, author_name):
+    """ generate a blog post """
+
+    template = """
+Title: {title}
+Date: {year}-{month}-{day} 
+Tags:
+Category:
+Author: {author}
+about_author: {about}
+Email: {email}
+
+"""
+    
+    # derive some info
+    today = datetime.today()
+    try:
+        author = author_info[author_name]
+    except KeyError:
+        raise KeyError('{} not a valid author'.format(author))
+    slug = title.lower().strip().replace(' ', '-')
+    
+    f_create = 'content/{}/{}_{:0>2}_{:0>2}_{}.md'.format(
+        today.year, author_name, today.month, today.day, slug)
+    
+
+    t = template.strip().format(title=title, 
+                                year=today.year, month=today.month, day=today.day,
+                                author=author['name'],
+                                about=author['about'],
+                                email=author['email'])
+
+    with open(f_create, 'w') as w:
+        w.write(t)
+    print('File created -> ' + f_create)
 
 def clean():
     if os.path.isdir(DEPLOY_PATH):
