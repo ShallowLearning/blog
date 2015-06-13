@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Joshua D. Loyal'
-SITENAME = u'ML Beta'
+SITENAME = u'Shallow Learning'
 SITEURL = u'https://joshloyal.github.io/blog'
 
 TIMEZONE = 'America/New_York'
@@ -66,7 +66,7 @@ THEME = "./templates/pure"
 
 PROFILE_IMG_URL = "images/profile_image.jpg"
 COVER_IMG_URL = "images/coverimage.jpg"
-TAGLINE = "beta for data scientists"
+#TAGLINE = ""
 
 PLUGIN_PATHS = ["/Users/jdl67/pelican/pelican-plugins"]
 PLUGINS = ['render_math', 'gravatar']
