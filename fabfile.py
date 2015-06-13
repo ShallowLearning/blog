@@ -23,7 +23,7 @@ env.cloudfiles_container = 'my_cloudfiles_container'
 
 author_info = { 'josh': {'name': 'Joshua Loyal',
                          'email': 'jloyal25@gmail.com',
-                         'about': 'Data scientist at Datarobot, '
+                         'about': 'Data scientist, '
                                   'physicist, wannabe guitar player, '
                                   'and an avid climber.'}
 }

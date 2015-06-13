@@ -3,7 +3,7 @@ Date: 2015-02-10
 Category: misc
 Tags: thoughts
 Author: Joshua Loyal
-about_author: Data scientist at Datarobot, physicist, wannabe guitar player, and an avid climber.
+about_author: Data scientist, physicist, wannabe guitar player, and an avid climber.
 Email: jloyal25@gmail.com
 
 Getting started is definitely half the battle -- it took me a solid two days of struggling with [Pelican][1], [Jinja2][2], and other pieces of software to even get this blog off the ground. It was a great learning experience though, and I am excited to start what I hope is a long -- maybe inconsistent -- habit of putting my projects on the web.
