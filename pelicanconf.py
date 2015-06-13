@@ -62,7 +62,7 @@ YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 NEWEST_FIRST_ARCHIVES = True
 
 # Specify theme
-THEME = "/Users/jdl67/pelican/pure"
+THEME = "./templates/pure"
 
 PROFILE_IMG_URL = "images/profile_image.jpg"
 COVER_IMG_URL = "images/coverimage.jpg"
