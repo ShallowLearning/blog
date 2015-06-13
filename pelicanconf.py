@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Joshua D. Loyal'
 SITENAME = u'Shallow Learning'
-SITEURL = u'https://joshloyal.github.io/blog'
+SITEURL = u'https://joshloyal.github.io/shallow-learning'
 
 TIMEZONE = 'America/New_York'
 
@@ -68,7 +68,7 @@ PROFILE_IMG_URL = "images/profile_image.jpg"
 COVER_IMG_URL = "images/coverimage.jpg"
 #TAGLINE = ""
 
-PLUGIN_PATHS = ["/Users/jdl67/pelican/pelican-plugins"]
+PLUGIN_PATHS = ["./plugins"]
 PLUGINS = ['render_math', 'gravatar']
 
 PATH = "content"
