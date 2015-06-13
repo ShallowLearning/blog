@@ -64,6 +64,33 @@ Email: {email}
         w.write(t)
     print('File created -> ' + f_create)
 
+def live_build(port=8000):
+    """ Setup a livereload server to preview the post as you edit.
+        Note: You need to install the python package as well as
+              the plugin in your browser of choice.
+    """
+
+    try:
+        import livereload
+    except ImportError:
+        raise ImportError('You need to install livereload...')
+
+    # clean everything
+    local('make clean')
+    local('make html')
+    os.chdir('output')
+
+
+    # setup server and add files you want to watch
+    server = livereload.Server()
+    server.watch('../content/',
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
+    server.watch('../templates/pure/',
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
+    server.watch('*.html')
+    server.watch('*.css')
+    server.serve(liveport=35729, port=port)
+
 def clean():
     if os.path.isdir(DEPLOY_PATH):
         local('rm -rf {deploy_path}'.format(**env))
