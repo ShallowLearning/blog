@@ -80,15 +80,12 @@ def live_build(port=8000):
     local('make html')
     os.chdir('output')
 
-
     # setup server and add files you want to watch
     server = livereload.Server()
     server.watch('../content/',
         livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
     server.watch('../templates/pure/',
         livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
-    server.watch('*.html')
-    server.watch('*.css')
     server.serve(liveport=35729, port=port)
 
 def clean():

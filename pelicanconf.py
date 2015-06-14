@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 AUTHOR = u'Joshua D. Loyal'
 SITENAME = u'Shallow Learning'
@@ -70,6 +71,21 @@ COVER_IMG_URL = "images/coverimage.jpg"
 
 PLUGIN_PATHS = ["./plugins"]
 PLUGINS = ['render_math', 'gravatar']
+
+# liquid tag plugins
+PLUGINS += ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.notebook']
+
+# some configuration if running with livebuild (dumb hack really...)
+cwd = os.getcwd().split('/')[-1]
+
+if cwd == 'shallow-learning':
+    print('Adding _nb_header.html to theme...')
+    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+    NOTEBOOK_DIR = './content/notebooks'
+elif cwd == 'output':
+    print('Adding ../_nb_header.html to theme...')
+    EXTRA_HEADER = open('../_nb_header.html').read().decode('utf-8')
+    NOTEBOOK_DIR = '../content/notebooks'
 
 PATH = "content"
 STATIC_PATHS = ['images']
