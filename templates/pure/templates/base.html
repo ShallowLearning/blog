@@ -17,7 +17,7 @@
     {% if FEED_RSS %}
         <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
-
+    
     {% block head %}
         <title>{% block title %}{{ SITENAME }} // {{ TAGLINE }}{% endblock title %}</title>
     {% endblock head %}
@@ -25,20 +25,21 @@
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
+    
+    {% if EXTRA_HEADER %}
+    {{ EXTRA_HEADER }}
+    {% endif %}
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
+    
     {% block head_css %}
     {% endblock %}
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
     
-    {% if EXTRA_HEADER %}
-    {{ EXTRA_HEADER }}
-    {% endif %}
-
 </head>
 
 <body>

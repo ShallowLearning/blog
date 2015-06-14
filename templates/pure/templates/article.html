@@ -2,8 +2,10 @@
 {% block title %}{{ article.title|striptags }} // {{ super() }}{% endblock title %}
 
 {% block head_css %}
+     
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
-{% endblock %}
+
+{% endblock %} 
 
 {% block head_js %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>

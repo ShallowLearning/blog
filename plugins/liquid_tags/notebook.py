@@ -222,11 +222,12 @@ class SubCell(Preprocessor):
 # Custom highlighter:
 #  instead of using class='highlight', use class='highlight-ipynb'
 def custom_highlighter(source, language='ipython', metadata=None):
-    formatter = HtmlFormatter(cssclass='highlight-ipynb')
+    #formatter = HtmlFormatter(cssclass='highlight-ipynb')
+    formatter = HtmlFormatter(style='monokai', cssclass='highlight-ipynb')
     if not language:
         language = 'ipython'
     output = _pygments_highlight(source, formatter, language)
-    return output.replace('<pre>', '<pre class="ipynb">')
+    return output.replace('<pre>', '<pre class="highlight">')
 
 
 #----------------------------------------------------------------------
@@ -305,6 +306,10 @@ def notebook(preprocessor, tag, markup):
         header = '\n'.join(CSS_WRAPPER.format(css_line)
                            for css_line in resources['inlining']['css'])
         header += JS_INCLUDE
+        
+        # hack to get the right css classes
+        reg = re.compile(r""".highlight """)
+        header = re.sub(reg, '.highlight-ipynb ', header)
 
         with open('_nb_header.html', 'w') as f:
             f.write(header)

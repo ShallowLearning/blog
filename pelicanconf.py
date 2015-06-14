@@ -70,7 +70,7 @@ COVER_IMG_URL = "images/coverimage.jpg"
 #TAGLINE = ""
 
 PLUGIN_PATHS = ["./plugins"]
-PLUGINS = ['render_math', 'gravatar']
+PLUGINS = ['render_math', 'gravatar', 'pre_tagger']
 
 # liquid tag plugins
 PLUGINS += ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.notebook']
