@@ -25,5 +25,5 @@ COVER_IMG_URL = "/blog/images/coverimage.jpg"
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "joshualoyalblog"
+DISQUS_SITENAME = "shallowlearning"
 #GOOGLE_ANALYTICS = ""

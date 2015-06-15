@@ -5,7 +5,7 @@ import os
 
 AUTHOR = u'Joshua D. Loyal'
 SITENAME = u'Shallow Learning'
-SITEURL = u'https://joshloyal.github.io/shallow-learning'
+SITEURL = u'https://shallowlearning.github.io/blog'
 
 TIMEZONE = 'America/New_York'
 
