@@ -25,7 +25,8 @@ TRANSLATION_FEED_ATOM = None
 #           ('Jinja2', 'http://jinja.pocoo.org/'),
 #           ('You can modify those links in your config file', '#'),)
 
-MENUITEMS = (('About', 'https://joshloyal.github.io'),)
+# these are relative to SITEURL. change this in sidebar.html if we want to use it
+#MENUITEMS = (('About', 'https://joshloyal.github.io'),)
 #             ('Resume', 'https://joshloyal.github.io/docs/resume.pdf'),)
 #
 ## Social widget
