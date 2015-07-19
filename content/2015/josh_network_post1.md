@@ -18,7 +18,7 @@ The Language of Neural Networks: Graphs
 ---------------------------------------
 Before we delve into the mathematics, let's briefly go over why we even call the algorithm a network. If you've done any previous reading on neural networks, it probably doesn't take long for the author to throw-up an intimidating picture like the following:
 
-![Network]({filename}/images/colored_nn.svg.png)
+{% img center-image {filename}/images/colored_nn.svg.png  200 200 Neural Network %}
 
 A Simple Network: Logistic Regression
 ---------------------------------------
