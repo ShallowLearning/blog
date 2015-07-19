@@ -32,5 +32,3 @@ import numpy as np
 def squared_loss(x, y):
     return np.mean( (y - x)**2 )
 ```
-
-Does this actually work? maybe it does I don't know
