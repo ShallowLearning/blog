@@ -10,7 +10,7 @@ Summary: Introduction to the Shallow Learning blog.  Brief Background to Machine
 Welcome to Shallow Learning.  I plan to write a number of posts on the theme of machine learning and statistics to help people gain a more intuitive understanding of various phenomena around us.  I'm going to start with a topic that has recently gained a lot of traction in the media; the perception of the pressing danger of machine artificial intelligence (AI) concerning humanity. Going forward Josh and I will touch on many of the abstractions present and implied by the debate. 
 
 <center>
-{% img mid {filename}/images/sky_net.jpg 400 200  "Judgement Day is coming"  %}
+{% img mid {filename}/images/sky_net.jpg 400 200  Judgement Day is coming  %}
 </center>
 
 Typically when people not directly working on AI or machine learning think about a the dangerous AI they think about a conscious malevolent superintelligence like Skynet (actually shockingly dumb, which is another problem altogether).  A long list of notables including Elon Musk, Ray Kurzweil, Bill Gates, and Stephen Hawking have expressed great concern about this topic<sup>[1][1][2][2]</sup>.  Polls are being taken of when Judgement Day will happen with scary results<sup>[3][3]</sup>. So why is this blog called Shallow Learning and not simply written by a computer? Simply put, while there have been amazing advances in AI research lately, the open problems in mimicking 1 billion years of evolution are incredibly hard if not intractable to solve. To begin to explain the current constraints of AI and why I am not worried about this result while working in the field, I need to introduce a few terms and limit my focus to the advances in Machine learning or statistical approaches to A.I.
