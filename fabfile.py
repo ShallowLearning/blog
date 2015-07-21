@@ -25,7 +25,10 @@ author_info = { 'josh': {'name': 'Joshua Loyal',
                          'email': 'jloyal25@gmail.com',
                          'about': 'Data scientist at Datarobot, '
                                   'physicist, wannabe guitar player, '
-                                  'and an avid climber.'}
+                                  'and an avid climber.'},
+                'kevin':{'name': 'Kevin Wang',
+                         'email': 'kcwang@ymail',
+                         'about': 'Data scientist at PowerAdvocate and Consultant, sleepy climber'}
 }
 
 def make_entry(title, author_name):
